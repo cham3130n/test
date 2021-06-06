@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  test:
+    container_name: test
+    build:
+      context: .
+      dockerfile: test.Dockerfile
+    volumes:
+      - '../service:/service'
+    command: sh -c 'cd service; npm install; npm start'
