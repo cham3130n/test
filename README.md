@@ -18,7 +18,12 @@ _Other used libraries and images are downloaded automaticaly on container deploy
 ## Test
 Test environment is built with ts-jest. Test files are placed in project's root folder and have names like *.test.ts
 ```bash
+# Inside the container
 docker-compose run test sh -c "cd service; npm t"
+
+# If you have installed jest, ts-jest and @types/jest, you can try to run them directly
+cd service
+npm t
 ```
 
 ## Running without container
