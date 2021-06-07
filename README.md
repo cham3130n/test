@@ -15,6 +15,12 @@ _Other used libraries and images are downloaded automaticaly on container deploy
 # docker-compose up test
 ```
 
+## Test
+Test environment is built with ts-jest. Test files are placed in project's root folder and have names like *.test.ts
+```bash
+docker-compose run test sh -c "cd service; npm t"
+```
+
 ## Running without container
 If one have already installed Node, it is possible to run built project from outside of a container. Script does nothing to the host system, neither creates any additional data. Transpiled code can be found in service/dist folder, so can be executed directly with Node. Main application file is **app.js**.
 
