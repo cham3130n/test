@@ -51,7 +51,7 @@ export class Directory extends Node {
      */
     public removeNode(node: INode): boolean {
         if (!this._nodes.find(n => n === node)) {
-            throw Error('Cannot remove node which is not belong to current folder');
+            throw Error('Cannot remove node that is not belong to current folder.');
         }
         this._nodes = this._nodes.filter(t => t !== node);
         return false;

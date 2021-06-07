@@ -71,8 +71,8 @@ export class VirtualFileSystem implements IFileSystem{
         const toNode = this._getPath(toParts) as Directory;
         if (!toNode) throw Error(`Cannot find target directory ${to}`);
 
-        fromNode.removeNode(objNode);
         toNode.addNode(objNode);
+        fromNode.removeNode(objNode);
         objNode.parent = toNode;
     }
 
